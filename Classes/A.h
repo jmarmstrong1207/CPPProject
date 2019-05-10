@@ -1,3 +1,5 @@
+#ifndef A_H
+#define A_H 
 class A
 {
 	private:
@@ -19,3 +21,5 @@ class A
 			age = x;
 		}
 }; // Yes, you do need a semicolon at the end of the class
+
+#endif

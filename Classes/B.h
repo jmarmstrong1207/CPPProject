@@ -1,3 +1,5 @@
+#ifndef B_H
+#define B_H
 #include <iostream>
 #include <string>
 
@@ -15,3 +17,5 @@ class B : A
 			name = n;
 		}
 };
+
+#endif
