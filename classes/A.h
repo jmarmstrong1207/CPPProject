@@ -1,25 +1,40 @@
-#ifndef A_H
-#define A_H 
-class A
-{
-	private:
-		int age;
-	
-	public:
-		A(int age)
-		{
-			this->age = age; // "this" is a B pointer
-		}
+#include<iostream>
+#include<string>
+using namespace std;
 
-		int getAge()
-		{
-			return age;
-		}
+class Car{
 
-		void setAge(int x)
-		{
-			age = x;
-		}
-}; // Yes, you do need a semicolon at the end of the class
+private:
+	string make;
+	string model;
+	string color;
+	int year;
 
-#endif
+public:
+
+	void setMake(string x){
+		make = x;
+	}
+	string getMake(){
+		return make;
+	}
+	void paintCar(string x){
+		color = x;
+	}
+	string getColor(){
+		return color;
+	}
+	void startCar(){
+		cout << "Engine Started" << endl;
+	}
+};
+
+int main(){
+	Car camry;
+	camry.setMake("Toyota");
+	cout << camry.getMake() << endl;
+	camry.paintCar("red");
+	cout << camry.getColor() << endl;
+	camry.startCar();
+	return 0;
+};
