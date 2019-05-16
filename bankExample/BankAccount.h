@@ -7,18 +7,18 @@ class BankAccount
 {
 	private:
 		std::string name;
-		int balance;
+		double balance;
 		bool isBankrupt;	
 
 	public:
-		BankAccount(std::string n, int bal, int bankrupt = false)
+		BankAccount(std::string n, double bal, int bankrupt = false)
 		{
 			name = n;
 			balance = bal;
 			isBankrupt = bankrupt;
 		}
 
-		int getBalance()
+		double getBalance()
 		{
 			return balance;
 		}
@@ -28,12 +28,12 @@ class BankAccount
 			return name;
 		}
 
-		void deposit(int inc)
+		void deposit(double inc)
 		{
 			balance += inc;
 		}
 
-		void withdrawal(int dec)
+		void withdrawal(double dec)
 		{
 			if (isBankrupt) std::cout << "You are bankrupt. You cannot withdraw any\
 			   	more money";
