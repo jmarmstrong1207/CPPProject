@@ -3,7 +3,7 @@
 
 #include "Car.h"
 
-class MiniCar : Car
+class MiniCar : public Car
 {
 	private:
 		bool isMiniCooper;
