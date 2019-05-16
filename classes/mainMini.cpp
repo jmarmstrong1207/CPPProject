@@ -4,14 +4,14 @@
 int main()
 {
 
-MiniCar smallVan("Toyota","miniVan", "blue",2000,false );
+	MiniCar smallVan("Toyota","miniVan", "blue",2000,false );
 
-std::cout<<smallVan.getIsMiniCooper()<<std::endl;
+	std::cout << smallVan.getIsMiniCooper() << std::endl;
 
-smallVan.paintCar("green");
-std::cout<<smallVan.getColor()<<std::endl;
+	smallVan.paintCar("green");
+	std::cout << smallVan.getColor() << std::endl;
 
-smallVan.startCar();
+	smallVan.startCar();
 
-return 0;
+	return 0;
 }

@@ -2,12 +2,14 @@
 #define BANK_H
 
 #include <iostream>
+
+// C++'s equivalent to ArrayList
 #include <vector>
 #include "BankAccount.h"
 class Bank
 {
 	private:
-		int totalBalance;
+		double totalBalance;
 		std::vector<BankAccount> bankAccounts;
 
 	public:
@@ -16,25 +18,29 @@ class Bank
 			return bankAccounts[i];
 		}
 
-		int getTotalBalance()
+		double getTotalBalance()
 		{
-			int sum = 0;
-			for (int i = 0; i < bankAccounts.size(); i++)
+			double sum = 0;
+			for (double i = 0; i < bankAccounts.size(); i++)
 			{
-				sum += bankAccounts[i].getBalance();
 				// Could also do bankAccounts.at(i).getBalance();
+				// C++ allows you to overload operators
+				sum += bankAccounts[i].getBalance();
 			}
 			return sum;
 		}
 
-		void addBankAccount(std::string name, int bal, int bankrupt = false)
+		// Setting a parameter to a value makes it so that the parameter is optional.
+		// You can just do add("Example", "5000")
+		void addBankAccount(std::string name, double bal, bool bankrupt = false)
 		{
 			bankAccounts.push_back(BankAccount(name, bal, bankrupt));
 		}
 
 		void removeBankAccount(int i)
 		{
-			// Uses an iterator for erasing AND inserting. I don't know why
+			// Uses an iterator for erasing AND inserting. I don't know the reason
+			// for this
 			bankAccounts.erase(bankAccounts.begin() + i); 
 		}
 };
