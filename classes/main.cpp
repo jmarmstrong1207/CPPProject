@@ -2,6 +2,7 @@
 
 int main()
 {
+	
 	Car camry("Toyota", "Camry" , "Blue", 2019);
 	std::cout << camry.getMake() << std::endl;
 
