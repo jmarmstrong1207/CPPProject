@@ -5,6 +5,7 @@ int main()
 {
 	int x = 1;
 
+	// * = pointers. & = reference (memory address)
 	int* p = &x;
 
 	std::cout << "What address p is pointing to: " << p << std::endl;
