@@ -23,6 +23,12 @@ class PointerApplication
 
 int main()
 {
+	// This is an example of using "new" in C++. Just like Java,
+	// the x variable is a pointer to an address of a class "Car". The
+	// only difference is that is it explicitly a pointer.
+	// Car* x = new Car();
+
+	///////////////////////////////////////////////
 	std::string name = "James";
 
 	// Name won't be changed
