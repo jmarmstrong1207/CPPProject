@@ -32,11 +32,15 @@ class Bank
 
 		// Setting a parameter to a value makes it so that the parameter is optional.
 		// You can just do add("Example", "5000")
-		void addBankAccount(std::string name, double bal, bool bankrupt = false)
+		void addNewBankAccount(std::string name, double bal, bool bankrupt = false)
 		{
 			bankAccounts.push_back(BankAccount(name, bal, bankrupt));
 		}
+		void addBankAccount(BankAccount& x)
+		{
 
+			bankAccounts.push_back(x);
+		}
 		void removeBankAccount(int i)
 		{
 			// Uses an iterator for erasing AND inserting. I don't know the reason
