@@ -3,6 +3,11 @@
 
 #include "Car.h"
 
+// Inheriting a class is implicitly private. This means that MiniCar wouldn't be
+// able to access Car's public functions. You have to make the superclass Car public.
+// The access modifier makes all of the variables and functions with access modifiers
+// that are higher (more exposed) turn into the given access modifier. Because public is
+// the highest access modifier, it will not change any of the variables' access modifier
 class MiniCar : public Car
 {
 	private:
