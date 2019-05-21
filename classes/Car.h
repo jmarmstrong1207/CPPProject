@@ -1,10 +1,13 @@
-// Defines this file as CAR_H to the compiler. Makes it so that it doesn't
-// import this file multiple times.
+/*
+ * Defines this file as CAR_H to the compiler. Makes it so that it doesn't
+ * import this file multiple times.
+ * For example: an x.cpp & y.cpp file both does "#include 'Car.h'"
+ * Without #ifndef & #define, it will copy-paste the code in both x.cpp and y.cpp,
+ * and if x.cpp includes y.cpp, it will detect the multiple copy-pastes and will
+ * not compile.
+ */
 
-// For example: an x.cpp & y.cpp file both does "#include 'Car.h'"
-// Without #ifndef & #define, it will copy-paste the code in both x.cpp and y.cpp,
-// and if x.cpp includes y.cpp, it will detect the multiple copy-pastes and will
-// not compile.
+// "If this file isn't defined as CAR_H already, define it as CAR_H"
 #ifndef CAR_H 
 #define CAR_H
 
