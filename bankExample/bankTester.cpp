@@ -19,7 +19,7 @@ int main()
     bankOfAmerica.addBankAccount(sarahsAccount);
 
     std::cout << bankOfAmerica.getBankAccount(1).getBalance() << std::endl;
-    std::cout << bankOfAmerica.getBankAccount(4).getName() << std::endl;
+    std::cout << bankOfAmerica.getBankAccount(3).getName() << std::endl;
 
     std::cout << bankOfAmerica.getTotalBalance() << std::endl;
     bankOfAmerica.removeBankAccount(1);
