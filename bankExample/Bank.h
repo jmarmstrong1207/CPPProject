@@ -37,7 +37,7 @@ class Bank
 			bankAccounts.push_back(BankAccount(name, bal, bankrupt));
 		}
 
-		void addBankAccount(BankAccount& x)
+		void addBankAccount(BankAccount x)
 		{
 			bankAccounts.push_back(x);
 		}

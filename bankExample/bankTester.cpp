@@ -23,6 +23,7 @@ int main()
 
     std::cout << bankOfAmerica.getTotalBalance() << std::endl;
     bankOfAmerica.removeBankAccount(1);
+
     std::cout << bankOfAmerica.getTotalBalance() << std::endl;
 
 
